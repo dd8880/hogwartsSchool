@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hogwarts School of Witchcraft and Wizardry</title>
+<link rel="stylesheet" href="resources/css/hogwarts.css">
+</head>
+<body onload="getStudents();">
+    <header>
+        <div>
+            <div class="header-title">
+                Hogwarts School of Witchcraft and Wizardry
+            </div>
+            <div class="header-logo">
+                <img src="resources/images/logo.png" />
+            </div>
+        </div>
+    </header>
+    <section>
+        <nav>
+            <div class="nav-left">
+                <span>
+                    House:
+                    <select id="mnuFilterHouses" onchange="filterStudentList(this)">
+                        <option>--all--</option>
+                    </select>
+                </span>
+                <span>
+                    Gender:
+                    <select id="mnuFilterGender" onchange="filterStudentList(this)">
+                        <option>--all--</option>
+                        <option value="boy">Boys</option>
+                        <option value="girl">Girls</option>
+                    </select>
+                </span>
+                <span>
+                    Blood:
+                    <select id="mnuFilterBlood" onchange="filterStudentList(this)">
+                        <option>--all--</option>
+                        <option value="pure">Pure</option>
+                        <option value="half">Half</option>
+                        <option value="muggle">Muggle</option>
+                    </select>
+                </span>
+                <span>
+                    Role:
+                    <select id="mnuFilterRole" onchange="filterStudentList(this)">
+                        <option>--all--</option>
+                        <option value="prefect">Prefect</option>
+                        <option value="inquisitor">Inquisitor</option>
+                    </select>
+                </span>
+                <span>
+                    Status:
+                    <select id="mnuFilterStatus" onchange="filterStudentList(this)">
+                        <option>--all--</option>
+                        <option value="active">Active</option>
+                        <option value="expelled">Expelled</option>
+                    </select>
+                </span>
+                <div>
+                    Search: <input type="text" id="search-student" placeholder="type a name here (i.e. Harry)" />
+                </div>
+            </div>
+            <div class="nav-right statistics-group">
+                Currently Shown: <span class="currently-shown">0</span>
+                Total Population: <span class="total-population">0</span>
+                Total Active: <span class="total-active">0</span>
+                Total Expelled: <span class="total-expelled">0</span>
+                <div class="total-population-houses"></div>
+            </div>
+        </nav>
+        <article>
+            <table id="tblStudentList">
+                <thead></thead>
+                <tbody></tbody>
+                <tfoot></tfoot>
+            </table>
+        </article>
+    </section>
+    <footer>
+        <a href="https://www.linkedin.com/in/dgwinther/">Diana Winther</a> &copy; 2021
+    </footer>
+    <div class="modal-background">
+        <div class="modal-view-student">
+            <div class="modal-header">
+                <div class="modal-header-title">
+                    <h2 class="modal-header-title-text">
+                        View Student Information
+                    </h2>
+                </div>
+                <div class="modal-header-action">
+                    <span class="modal-close-button">&Cross;</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="student-photo">
+                    <img src="resources/images/students/default.jpg">
+                </div>
+                <div class="student-info">
+                    <input type="hidden" id="student-id" value="" />
+                    <div class="modal-display-field-group student-fullname">
+                        <div class="modal-display-field-label">Full Name</div>
+                        <div class="modal-display-field-value">John Doe</div>
+                    </div>
+                    <div class="modal-display-field-group student-nickname">
+                        <div class="modal-display-field-label">Nick Name</div>
+                        <div class="modal-display-field-value">John</div>
+                    </div>
+                    <div class="modal-display-field-group student-gender">
+                        <div class="modal-display-field-label">Gender</div>
+                        <div class="modal-display-field-value">Boy</div>
+                    </div>
+                    <div class="modal-display-field-group student-house">
+                        <div class="modal-display-field-label">House</div>
+                        <div class="modal-display-field-value">Gryffindor</div>
+                    </div>
+                    <div class="modal-display-field-group student-blood">
+                        <div class="modal-display-field-label">Blood</div>
+                        <div class="modal-display-field-value">Pure</div>
+                    </div>
+                    <div class="modal-display-field-group student-roles">
+                        <div class="modal-display-field-label">Roles</div>
+                        <div class="modal-display-field-value">Student</div>
+                    </div>
+                    <div class="modal-display-field-group student-status">
+                        <div class="modal-display-field-label">Status</div>
+                        <div class="modal-display-field-value">Active</div>
+                    </div>
+                    <div class="modal-display-field-group student-crest">
+                        <div class="modal-display-field-label">Crest</div>
+                        <div class="modal-display-field-value">
+                            <img src="resources/images/crest/gryffindor.png">
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-action-buttons">
+                    <button id="make-prefect" class="button button-green">Make Prefect</button>
+                    <button id="revoke-prefect" class="button button-red">Revoke Prefect-role</button>
+                    <button id="make-inquisitor" class="button button-black">Make Inquisitor</button>
+                    <button id="revoke-inquisitor" class="button button-black">Revoke Inquisitor</button>
+                    <button id="expel-student" class="button button-red">Expel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="resources/js/hogwarts.js"></script>
+</body>
+</html>

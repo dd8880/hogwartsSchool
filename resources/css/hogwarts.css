@@ -1,0 +1,232 @@
+@font-face {
+  font-family: hp;
+  src: url("../fonts/HennyPenny-Regular.ttf");
+}
+
+body {
+  margin: 0;
+}
+
+body > section {
+  width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  height: 85px;
+  width: 100%;
+  background-color: brown;
+  color: white;
+  padding: 35px;
+  font-family: hp;
+  font-size: x-large;
+}
+
+header > div {
+  width: 90%;
+  margin: 0 auto;
+}
+
+header > div > * {
+  width: 50%;
+  float: left;
+  padding: 10px 0;
+}
+
+.header-logo {
+  text-align: right;
+}
+
+.header-logo > img {
+  width: 15%;
+  max-width: 30%;
+}
+
+nav {
+  position: relative;
+  height: 80px;
+}
+
+nav > * {
+  position: absolute;
+  top: 30px;
+}
+
+nav > .nav-left {
+  float: left;
+  width: 50%;
+}
+
+nav > .nav-right {
+  float: right;
+  right: 0;
+  width: 50%;
+  text-align: right;
+}
+
+input#search-student {
+  width: 60%;
+}
+
+#tblStudentList {
+  width: 100%;
+  margin-bottom: 50px;
+  border: solid thin #000;
+}
+/* 
+#tblStudentList > tbody .action-row {
+  font-weight: bold;
+} */
+
+#tblStudentList > tbody .action-column {
+  text-align: center;
+}
+
+#tblStudentList > tbody #view-info {
+  width: 50%;
+  cursor: pointer;
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: none;
+}
+
+.modal-view-student {
+  margin: 5% auto 0;
+  width: 70%;
+  height: 68%;
+  background: white;
+  padding: 20px;
+}
+
+.modal-crest-gryffindor {
+  background: #7f0909;
+  color: white !important;
+}
+
+.modal-crest-slytherin {
+  background: #0d6217;
+  color: white !important;
+}
+
+.modal-crest-hufflepuff {
+  background: #eee117;
+  color: black !important;
+}
+
+.modal-crest-ravenclaw {
+  background: #000a90;
+  color: white !important;
+}
+
+.modal-header {
+  height: 35px;
+  margin-bottom: 10px;
+}
+
+.modal-header > * {
+  float: left;
+}
+
+.modal-header > .modal-header-title {
+  width: 90%;
+}
+
+.modal-header-title-text {
+  margin: 0;
+}
+
+.modal-header > .modal-header-action {
+  width: 10%;
+}
+
+.modal-header-action > * {
+  float: right;
+}
+
+.modal-close-button {
+  border-radius: 5px;
+  padding: 5px;
+  background-color: red;
+  color: white;
+  text-align: center;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.modal-body > * {
+  float: left;
+}
+
+.modal-body > .student-photo {
+  width: 40%;
+  padding-right: 10px;
+}
+
+.modal-body .student-photo img {
+  width: 90%;
+}
+
+.modal-body > .student-info {
+  width: 58%;
+}
+
+.student-info > .modal-display-field-group {
+  width: 100%;
+  height: 25px;
+  margin-bottom: 5px;
+}
+
+.student-info > .modal-display-field-group > * {
+  float: left;
+}
+
+.modal-display-field-group > .modal-display-field-label {
+  width: 40%;
+  padding-right: 5px;
+}
+
+.modal-display-field-group > .modal-display-field-value {
+  width: 58%;
+}
+
+.student-info .student-crest img {
+  width: 60%;
+}
+
+.button {
+  color: white;
+}
+
+.button.button-green {
+  background: black;
+}
+
+.button.button-black {
+  background: blueviolet;
+}
+
+.button.button-red {
+  background: red;
+}
+
+button#expel-student {
+  float: right;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 10px 0;
+  background: brown;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+}
